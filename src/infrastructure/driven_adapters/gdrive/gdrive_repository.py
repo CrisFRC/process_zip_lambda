@@ -6,7 +6,6 @@ from src.infrastructure.driven_adapters.gdrive.gdrive_connection import DriveCon
 
 class GDriveRepository(DriveRepository):
     def __init__(self):
-        # Inyección interna de la conexión.
         self.service = DriveConnection.get_service()
         
     def download_file(self, source_drive_path: str, local_dest_path: str) -> None:
